@@ -7,7 +7,9 @@
 //
 
 #import "WLOS_SDKViewController.h"
-
+#import <wlos_sdk/weilai_sdk.h>
+#import <weilai_sdk.h>
+//#import "weilai_sdk.h"
 @interface WLOS_SDKViewController ()
 
 @end
@@ -17,6 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    weilai_sdk *weilai = [[weilai_sdk alloc] init];
+    NSString *abc = [weilai test:@"abcd"];
+    NSLog(@"result => %@", abc);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
