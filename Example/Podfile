@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'wlos_sdk_Example' do
+  pod 'wlos_sdk', :path => '../'
+
+  target 'wlos_sdk_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end
