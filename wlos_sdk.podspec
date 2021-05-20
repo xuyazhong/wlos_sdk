@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'wlos_sdk'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of wlos_sdk.'
+  s.version          = '0.0.1'
+  s.summary          = 'wlos_sdk 测试'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -31,8 +31,11 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   # s.source_files = 'wlos_sdk/Classes/**/*'
-  s.source_files =  "*.h"
-  s.vendored_libraries =  "*.a"
+  s.source_files =  "weilai_sdk.h"
+  s.vendored_libraries =  "libweilai_sdk.a"
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   # s.resource_bundles = {
   #   'wlos_sdk' => ['wlos_sdk/Assets/*.png']
